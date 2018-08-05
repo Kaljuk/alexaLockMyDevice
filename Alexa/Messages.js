@@ -1,7 +1,9 @@
 /**
- * @description Message creation for answering alexa
+ * @description Message for answering to Amazon WS
  */
-
+function Message(o) {
+    
+}
 
 
 
@@ -56,6 +58,8 @@ const intentResponse = {
 
 
 module.exports = {
+    
+    // @description Raw static messages
     raw: {
         launchResponse,
         intentResponse
