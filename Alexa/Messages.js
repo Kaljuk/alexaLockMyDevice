@@ -1,8 +1,29 @@
+
 /**
+ * @typedef MessageContents
+ * @type {String}
+ * @description 
+ * Answer that should be responded from alexa
+ * Currently Supported Effects [whisper, spell, digits, telephone]
+ * Effect starts - |effectName>
+ * Effect ends   - <effectName|
+ * @example "Ahoy there |whisper>do you recognize me?<whisper|"
+ */
+/**
+ * @typedef MessageParameters
+ * @prop {MessageContents} contents 
+ */
+/**
+ * @param {MessageParameters} o
  * @description Message for answering to Amazon WS
  */
 function Message(o) {
-    
+    this.createResponse = function() {
+
+    }
+    this.parseToAmazon = function(contents) {
+        
+    }
 }
 
 
@@ -63,5 +84,6 @@ module.exports = {
     raw: {
         launchResponse,
         intentResponse
-    }
+    },
+    Message
 }
