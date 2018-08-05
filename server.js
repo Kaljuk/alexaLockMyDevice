@@ -18,9 +18,9 @@ const sensitive = require('./sensitive');
 const alexaValidator = require('./Alexa/Validation').validator({
     applicationId: sensitive.alexa.applicationId
 })
-// const alexaResponder = require('./Alexa/Communication'); // 
+const alexaResponder = require('./Alexa/Communication'); // 
 
-const alexaMessages = require('./Alexa/Messages');
+const alexaMessages = require('./Alexa/Messages'); 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 // Validate all incoming requests
 app.use(alexaValidator);
 // Identify and process the valid requests
-//app.use();
+app.use(alexaResponder);
 
 // Test Get page
 app.get('/', (req, res) => {
