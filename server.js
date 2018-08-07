@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 // Validate all incoming requests
 app.use(alexaValidator);
 // Identify and process the valid requests
-app.use(alexaResponder);
+//app.use(alexaResponder);
 
 // Test Get page
 app.get('/', (req, res) => {
