@@ -36,9 +36,9 @@ function Validator(o) {
         
         // Identify the request type
         const hasRequestType = (req && req.body && req.body.request && req.body.request.type);
-        alexa.requestType = (hasRequestType)? req.body.request.type : null;
+        req.alexa.requestType = (hasRequestType)? req.body.request.type : null;
         if (o.log === true)
-            log(`Incoming request, type: ${alexa.requestType}`);
+            log(`Incoming request, type: ${req.alexa.requestType}`);
 
         next();
     }
