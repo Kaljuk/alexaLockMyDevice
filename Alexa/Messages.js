@@ -34,8 +34,10 @@ const launchResponse = {
 
     "response": {
         "outputSpeech": {
-            "type": "PlainText",
-            "text": "I am not a real human."        },
+            "type": "SSML",
+            "text": "I am not a real human.",
+            "ssml": `<speak> No, You</speak>`
+        },
         "reprompt": {
             "outputSpeech": {
                 "type": "PlainText",
